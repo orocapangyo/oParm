@@ -1,0 +1,109 @@
+<?xml version="1.0" ?>
+
+<robot name="oparm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+	<!-- BGN - Include -->
+	<xacro:include filename="$(find oparm_description)/urdf/links_joints.xacro" />
+	<xacro:include filename="$(find oparm_description)/urdf/robot_parameters.xacro" />
+	<!-- END - Include -->
+	<!-- BGN - Robot description -->
+	<m_link_mesh name="${l00}"
+							 origin_rpy="0 0 0" origin_xyz="0 0 0"
+							 mass="0.5"
+							 ixx="0.00014087" ixy="0" ixz="0"
+							 iyy="0.00014087" iyz="0"
+							 izz="0.00028054"
+							 meshfile="package://oparm_description/meshes/oparm_base.dae"
+							 meshscale="1 1 1" />
+ 
+	<m_joint name="${l00}__${l01}" type="revolute"
+					 axis_xyz="0 0 1"
+					 origin_rpy="0 0 0.0" origin_xyz="0 0 0.0085"
+					 parent="${l00}" child="${l01}"
+					 limit_e="30" limit_l="-3.14" limit_u="3.14" limit_v="1.571" />
+
+	<m_link_mesh name="${l01}"
+							 origin_rpy="0 0 0" origin_xyz="0 0 0"
+							 mass="0.5"
+							 ixx="0.00025315" ixy="0" ixz="0"
+							 iyy="0.000747" iyz="0"
+							 izz="0.00070135"
+							 meshfile="package://oparm_description/meshes/oparm_link01.dae"
+							 meshscale="1 1 1" />
+	
+	<m_joint name="${l01}__${l02}" type="revolute"
+					 axis_xyz="1 0 0"
+					 origin_rpy="0 0 0.0" origin_xyz="0 0 0.06"
+					 parent="${l01}" child="${l02}"
+					 limit_e="30" limit_l="-1.744444444" limit_u="1.744444444" limit_v="1.571" />
+
+
+	<m_link_mesh name="${l02}"
+							 origin_rpy="0 0 0" origin_xyz="0 0 0"
+							 mass="0.5"
+							 ixx="0.002022087" ixy="0" ixz="0"
+							 iyy="0.002515938" iyz="0"
+							 izz="0.00070135"
+							 meshfile="package://oparm_description/meshes/oparm_link02.dae"
+							 meshscale="1 1 1" />
+	
+	<m_joint name="${l02}__${l03}" type="revolute"
+					 axis_xyz="1 0 0"
+					 origin_rpy="0 0 0.0" origin_xyz="0 0 0.215"
+					 parent="${l02}" child="${l03}"
+					 limit_e="30" limit_l="-2.267777778" limit_u="2.267777778" limit_v="1.571" />
+
+
+	<m_link_mesh name="${l03}"
+							 origin_rpy="0 0 0" origin_xyz="0 0 0"
+							 mass="0.5"
+							 ixx="0.000403588" ixy="0" ixz="0"
+							 iyy="0.000403588" iyz="0"
+							 izz="0.0002075"
+							 meshfile="package://oparm_description/meshes/oparm_link03.dae"
+							 meshscale="1 1 1" />
+	
+	<m_joint name="${l03}__${l04}" type="revolute"
+					 axis_xyz="0 0 1"
+					 origin_rpy="0 0 0.0" origin_xyz="0 0 0.085"
+					 parent="${l03}" child="${l04}"
+					 limit_e="30" limit_l="-3.14" limit_u="3.14" limit_v="1.571" />
+
+
+	<m_link_mesh name="${l04}"
+							 origin_rpy="0 0 0" origin_xyz="0 0 0"
+							 mass="0.5"
+							 ixx="0.000321884" ixy="0" ixz="0"
+							 iyy="0.00049718" iyz="0"
+							 izz="0.000382796"
+							 meshfile="package://oparm_description/meshes/oparm_link04.dae"
+							 meshscale="1 1 1" />
+	
+	<m_joint name="${l04}__${l05}" type="revolute"
+					 axis_xyz="1 0 0"
+					 origin_rpy="0 0 0.0" origin_xyz="0 0 0.0725"
+					 parent="${l04}" child="${l05}"
+					 limit_e="30" limit_l="-1.744444444" limit_u="1.744444444" limit_v="1.571" />
+
+
+	<m_link_mesh name="${l05}"
+							 origin_rpy="0 0 0" origin_xyz="0 0 0"
+							 mass="1"
+							 ixx="0.00025316" ixy="0" ixz="0"
+							 iyy="0.00025316" iyz="0"
+							 izz="0.000319052"
+							 meshfile="package://oparm_description/meshes/oparm_link05.dae"
+							 meshscale="1 1 1" />
+	
+	<!-- END - Robot description -->
+    <gazebo>
+        <static>false</static>
+
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+           <robotNamespace>/oparm</robotNamespace>
+            <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+            <legacyModeNS>true</legacyModeNS>
+        </plugin>
+    </gazebo>
+  
+</robot>
