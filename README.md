@@ -20,7 +20,7 @@ $ roslaunch oparm_description oparm.launch
 ```
 ---
 ## Visit and join 'Open Robotics Community Alliance'
-* [OROCA](http://http://www.oroca.org/)
+* [OROCA](http://www.oroca.org/)
 * [OROCA PANGYO Meetup](https://www.meetup.com/Design-Make-Share-in-Seongnam-KR/)
 
 * [OROCA PANGYO Slack](https://orocapangyo.slack.com/)
