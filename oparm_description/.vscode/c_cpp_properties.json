@@ -6,16 +6,11 @@
                 "limitSymbolsToIncludedHeaders": true
             },
             "includePath": [
-                "/home/winine/catkin_ws/devel/include",
-                "/opt/ros/kinetic/include",
-                "/home/winine/catkin_ws/src/ex_urdf/include",
-                "/home/winine/catkin_ws/src/oparm/include",
-                "/home/winine/catkin_ws/src/turtlebot3_simulations/turtlebot3_fake/include",
-                "/home/winine/catkin_ws/src/turtlebot3_simulations/turtlebot3_gazebo/include",
-                "/home/winine/catkin_ws/src/turtlebot3/turtlebot3_slam/include",
-                "/usr/include"
+                "/home/daniel/catkin_ws/devel/include/**",
+                "/opt/ros/melodic/include/**",
+                "/usr/include/**"
             ],
-            "name": "Linux",
+            "name": "ROS",
             "intelliSenseMode": "gcc-x64",
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "c11",

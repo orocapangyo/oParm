@@ -9,10 +9,8 @@ project(oparm_description)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   urdf
-  controller_manager
-  joint_state_controller
-  robot_state_publisher
 )
+
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -105,7 +103,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES oparm_description
-#  CATKIN_DEPENDS other_catkin_pkg
+#  CATKIN_DEPENDS urdf
 #  DEPENDS system_lib
 )
 
@@ -117,7 +115,7 @@ catkin_package(
 ## Your package locations should be listed before other locations
 include_directories(
 # include
-# ${catkin_INCLUDE_DIRS}
+  ${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
