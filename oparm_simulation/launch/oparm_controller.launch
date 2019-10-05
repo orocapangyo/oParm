@@ -1,0 +1,11 @@
+<launch>
+  <arg name="use_robot_name"    default="oparm"/>
+
+  <rosparam file="$(find oparm_simulation)/config/oparm_controller.yaml"
+   command="load" ns="$(arg use_robot_name)"/>
+
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+   output="screen" ns="$(arg use_robot_name)"
+   args="joint_state_controller joint1_position joint2_position joint3_position joint4_position joint5_position"/>
+
+</launch>
