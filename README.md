@@ -16,7 +16,7 @@ $ roslaunch oparm_description oparm.launch
 
 ## Gazebo
 ```
-// UNDER DEVELOPING
+$ roslaunch oparm_simulation oparm_gazebo.launch
 ```
 ---
 ## Visit and join 'Open Robotics Community Alliance'
