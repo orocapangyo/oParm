@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>oparm_moveit</name>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <description>
     An automatically generated package with all the configuration and launch files for using the oParm with the MoveIt! Motion Planning Framework
   </description>
