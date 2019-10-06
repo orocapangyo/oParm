@@ -19,6 +19,11 @@ $ roslaunch oparm_description oparm.launch
 $ roslaunch oparm_simulation oparm_gazebo.launch
 ```
 ---
+## MoveIt!
+```
+$ roslaunch oparm_moveit demo.launch
+```
+---
 ## Visit and join 'Open Robotics Community Alliance'
 * [OROCA](http://www.oroca.org/)
 * [OROCA PANGYO Meetup](https://www.meetup.com/Design-Make-Share-in-Seongnam-KR/)

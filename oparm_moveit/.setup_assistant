@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: oparm_description
+    relative_path: urdf/oparm.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/oparm.srdf
+  CONFIG:
+    author_name: Hyun-Wook Choi
+    author_email: danichoi737@gmail.com
+    generated_timestamp: 1570327207
