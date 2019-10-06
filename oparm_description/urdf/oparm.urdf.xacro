@@ -6,6 +6,20 @@
   <!-- Import Gazebo settings -->
   <xacro:include filename="$(find oparm_description)/urdf/oparm.gazebo.xacro"/>
 
+  <!-- Transmission macro -->
+  <xacro:macro name="SimpleTransmission" params="joint n">
+    <transmission name="tran${n}">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${joint}">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="motor${n}">
+        <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+  </xacro:macro>
+
   <!-- World -->
   <link name="world">
   </link>
@@ -52,6 +66,9 @@
     <limit effort="1" velocity="1" lower="${-pi}" upper="${pi}"/>
   </joint>
 
+  <!-- Transmission 1 -->
+  <xacro:SimpleTransmission n="1" joint="joint1"/>
+
   <!-- Link 1 -->
   <link name="link1">
     <visual>
@@ -86,6 +103,9 @@
     <axis xyz="1 0 0"/>
     <limit effort="1" velocity="1" lower="-1.57" upper="1.57"/>
   </joint>
+
+  <!-- Transmission 2 -->
+  <xacro:SimpleTransmission n="2" joint="joint2"/>
 
   <!-- Link 2 -->
   <link name="link2">
@@ -122,6 +142,9 @@
     <limit effort="1" velocity="1" lower="-1.75" upper="1.75"/>
   </joint>
 
+  <!-- Transmission 3 -->
+  <xacro:SimpleTransmission n="3" joint="joint3"/>
+
   <!-- Link 3 -->
   <link name="link3">
     <visual>
@@ -157,6 +180,9 @@
     <limit effort="1" velocity="1" lower="${-pi}" upper="${pi}"/>
   </joint>
 
+  <!-- Transmission 4 -->
+  <xacro:SimpleTransmission n="4" joint="joint4"/>
+
   <!-- Link 4 -->
   <link name="link4">
     <visual>
@@ -191,6 +217,9 @@
     <axis xyz="1 0 0"/>
     <limit effort="1" velocity="1" lower="-1.57" upper="1.57"/>
   </joint>
+
+  <!-- Transmission 5 -->
+  <xacro:SimpleTransmission n="5" joint="joint5"/>
 
   <!-- Link 5 -->
   <link name="link5">

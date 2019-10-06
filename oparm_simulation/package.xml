@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>oparm_simulation</name>
+  <version>0.0.1</version>
+  <description>
+    OROCA PANGYO oParm simulation package for Gazebo
+  </description>
+
+  <!-- License -->
+  <license>TODO</license>
+
+  <!-- Author and maintainer -->
+  <author email="danichoi737@gmail.com">Hyun-Wook Choi</author>
+  <maintainer email="danichoi737@gmail.com">Hyun-Wook Choi</maintainer>
+
+  <!-- URL -->
+  <url type="website">http://www.oroca.org/</url>
+  <url type="repository">https://github.com/orocapangyo/oParm</url>
+
+  <!-- Dependencies -->
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>std_msgs</depend>
+  <depend>gazebo_ros</depend>
+  <depend>gazebo_ros_control</depend>
+  <depend>controller_manager</depend>
+  <depend>xacro</depend>
+  <depend>urdf</depend>
+
+  <!-- Export -->
+  <export>
+  </export>
+</package>
