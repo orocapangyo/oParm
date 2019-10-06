@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>oparm_moveit</name>
+  <version>0.0.1</version>
+  <description>
+    An automatically generated package with all the configuration and launch files for using the oParm with the MoveIt! Motion Planning Framework
+  </description>
+
+  <!-- License -->
+  <license>TODO</license>
+
+  <!-- Author and maintainer -->
+  <author email="danichoi737@gmail.com">Hyun-Wook Choi</author>
+  <maintainer email="danichoi737@gmail.com">Hyun-Wook Choi</maintainer>
+
+  <!-- URL -->
+  <url type="website">http://www.oroca.org/</url>
+  <url type="repository">https://github.com/orocapangyo/oParm</url>
+  <url type="website">http://moveit.ros.org/</url>
+  <url type="bugtracker">https://github.com/ros-planning/moveit/issues</url>
+  <url type="repository">https://github.com/ros-planning/moveit</url>
+
+  <!-- Dependencies -->
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>moveit_ros_move_group</exec_depend>
+  <exec_depend>moveit_fake_controller_manager</exec_depend>
+  <exec_depend>moveit_kinematics</exec_depend>
+  <exec_depend>moveit_planners_ompl</exec_depend>
+  <exec_depend>moveit_ros_visualization</exec_depend>
+  <exec_depend>moveit_setup_assistant</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <!-- This package is referenced in the warehouse launch files, but does not build out of the box at the moment. Commented the dependency until this works. -->
+  <!-- <run_depend>warehouse_ros_mongo</run_depend> -->
+  <build_depend>oparm_description</build_depend>
+  <exec_depend>oparm_description</exec_depend>
+
+  <!-- Export -->
+  <export>
+  </export>
+</package>

@@ -1,0 +1,17 @@
+<launch>
+  <arg name="robot_name"    default="oparm"/>
+  <arg name="open_rviz"     default="true"/>
+  <arg name="use_gui"       default="ture"/>
+
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find oparm_description)/urdf/oparm.urdf.xacro'"/>
+
+  <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher">
+    <param name="use_gui" value="${arg use_gui}"/>
+  </node>
+
+  <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher"/>
+
+  <group if="$(arg open_rviz)">
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find oparm_description)/rviz/oparm.rviz"/>
+  </group>
+</launch>
