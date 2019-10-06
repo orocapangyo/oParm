@@ -18,7 +18,6 @@ $ roslaunch oparm_description oparm.launch
 ```
 $ roslaunch oparm_simulation oparm_gazebo.launch
 ```
----
 ## MoveIt!
 ```
 $ roslaunch oparm_moveit demo.launch
