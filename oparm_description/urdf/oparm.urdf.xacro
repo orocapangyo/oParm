@@ -6,6 +6,9 @@
   <!-- Import Gazebo settings -->
   <xacro:include filename="$(find oparm_description)/urdf/oparm.gazebo.xacro"/>
 
+	<!-- Properties -->
+	<xacro:property name="pi" value="3.1415926"/>
+
   <!-- Transmission macro -->
   <xacro:macro name="SimpleTransmission" params="joint n">
     <transmission name="tran${n}">
