@@ -6,6 +6,9 @@
   <!-- Import Gazebo settings -->
   <xacro:include filename="$(find oparm_description)/urdf/oparm.gazebo.xacro"/>
 
+	<!-- Properties -->
+	<xacro:property name="pi" value="3.1415926"/>
+
   <!-- Transmission macro -->
   <xacro:macro name="SimpleTransmission" params="joint n">
     <transmission name="tran${n}">
@@ -58,12 +61,13 @@
   </link>
 
   <!-- Joint 1 -->
+	<!-- ROBOTIS Dynamixel MX-106 -->
   <joint name="joint1" type="revolute">
     <parent link="base"/>
     <child link="link1"/>
     <origin xyz="0 0 0.0085" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1" velocity="1" lower="${-pi}" upper="${pi}"/>
+    <limit effort="8.4" velocity="0.212" lower="${-pi}" upper="${pi}"/>
   </joint>
 
   <!-- Transmission 1 -->
@@ -89,19 +93,20 @@
     <inertial>
       <origin xyz="0.0 0.0 3.9684358e-02"/>
       <mass value="4.2165803e-01"/>
-      <inertia ixx="5.7833699e-04" ixy="0.0" ixz="0.0"
-               iyy="4.3337111e-04" iyz="0.0"
-               izz="3.1986899e-04"/>
+      <inertia ixx="3.1986899e-04" ixy="0.0" ixz="0.0"
+               iyy="5.7833699e-04" iyz="0.0"
+               izz="4.3337111e-04"/>
     </inertial>
   </link>
 
   <!-- Joint 2 -->
+	<!-- ROBOTIS Dynamixel MX-106 (x2) -->
   <joint name="joint2" type="revolute">
     <parent link="link1"/>
     <child link="link2"/>
     <origin xyz="0 0 0.06" rpy="0 0 0"/>
     <axis xyz="1 0 0"/>
-    <limit effort="1" velocity="1" lower="-1.57" upper="1.57"/>
+    <limit effort="16.8" velocity="0.118" lower="-1.57" upper="1.57"/>
   </joint>
 
   <!-- Transmission 2 -->
@@ -129,17 +134,18 @@
       <mass value="8.4958426e-01"/>
       <inertia ixx="3.1351289e-03" ixy="0.0" ixz="0.0"
                iyy="3.8828211e-03" iyz="0.0"
-               izz="1.0956725e-03"/>
+               izz="-1.0956725e-03"/>
     </inertial>
   </link>
 
   <!-- Joint 3 -->
+	<!-- ROBOTIS Dynamixel MX-106 -->
   <joint name="joint3" type="revolute">
     <parent link="link2"/>
     <child link="link3"/>
     <origin xyz="0 0 0.215" rpy="0 0 0"/>
     <axis xyz="1 0 0"/>
-    <limit effort="1" velocity="1" lower="-1.75" upper="1.75"/>
+    <limit effort="8.4" velocity="0.118" lower="-1.75" upper="1.75"/>
   </joint>
 
   <!-- Transmission 3 -->
@@ -172,12 +178,13 @@
   </link>
 
   <!-- Joint 4 -->
+	<!-- ROBOTIS Dynamixel MX-28 -->
   <joint name="joint4" type="revolute">
     <parent link="link3"/>
     <child link="link4"/>
     <origin xyz="0 0 0.085" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="1" velocity="1" lower="${-pi}" upper="${pi}"/>
+    <limit effort="2.5" velocity="0.276" lower="${-pi}" upper="${pi}"/>
   </joint>
 
   <!-- Transmission 4 -->
@@ -210,12 +217,13 @@
   </link>
 
   <!-- Joint 5-->
+	<!-- ROBOTIS Dynamixel MX-28 -->
   <joint name="joint5" type="revolute">
     <parent link="link4"/>
     <child link="link5"/>
     <origin xyz="0 0 0.0725" rpy="0 0 0"/>
     <axis xyz="1 0 0"/>
-    <limit effort="1" velocity="1" lower="-1.57" upper="1.57"/>
+    <limit effort="2.5" velocity="0.118" lower="-1.57" upper="1.57"/>
   </joint>
 
   <!-- Transmission 5 -->
@@ -243,7 +251,7 @@
       <mass value="1.2109134e-01"/>
       <inertia ixx="6.6737478e-05" ixy="0.0" ixz="0.0"
                iyy="6.7027298e-05" iyz="0.0"
-               izz="3.9548898e-05"/>
+               izz="-3.9548898e-05"/>
     </inertial>
   </link>
   
