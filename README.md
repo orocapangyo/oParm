@@ -4,7 +4,13 @@ The project of make robot arm using ROS.
 ## How to clone and build?
 ```
 $ cd ~/catkin_ws/src
+
+## Stable ##
+$ git clone https://github.com/orocapangyo/oParm.git
+
+## Develop ##
 $ git clone https://github.com/danichoi737/oParm.git
+
 $ cd ~/catkin_ws
 $ catkin_make
 ```
