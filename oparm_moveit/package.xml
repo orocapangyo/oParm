@@ -1,27 +1,27 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>oparm_moveit</name>
-  <version>0.0.1</version>
+  <version>0.0.3</version>
   <description>
-    An automatically generated package with all the configuration and launch files for using the oParm with the MoveIt! Motion Planning Framework
+     An automatically generated package with all the configuration and launch files for using the oParm with the MoveIt! Motion Planning Framework
   </description>
-
-  <!-- License -->
+  
+	<!-- License -->
   <license>TODO</license>
 
   <!-- Author and maintainer -->
-  <author email="danichoi737@gmail.com">Hyun-Wook Choi</author>
+	<author email="danichoi737@gmail.com">Hyun-Wook Choi</author>
   <maintainer email="danichoi737@gmail.com">Hyun-Wook Choi</maintainer>
 
   <!-- URL -->
   <url type="website">http://www.oroca.org/</url>
   <url type="repository">https://github.com/orocapangyo/oParm</url>
-  <url type="website">http://moveit.ros.org/</url>
+	<url type="website">http://moveit.ros.org/</url>
   <url type="bugtracker">https://github.com/ros-planning/moveit/issues</url>
   <url type="repository">https://github.com/ros-planning/moveit</url>
 
   <!-- Dependencies -->
-  <buildtool_depend>catkin</buildtool_depend>
+	<buildtool_depend>catkin</buildtool_depend>
   <exec_depend>moveit_ros_move_group</exec_depend>
   <exec_depend>moveit_fake_controller_manager</exec_depend>
   <exec_depend>moveit_kinematics</exec_depend>
